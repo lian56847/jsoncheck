@@ -1,9 +1,11 @@
 package com.example.demo8.ww;
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import net.sf.json.JSONObject;
 
 
 /**
@@ -13,8 +15,8 @@ import net.sf.json.JSONObject;
  * @version: 1.0
  */
 // 1. 检查json格式的正确性  2.将美化前的json压缩成字符串  3.解决大json无法压缩的问题
-//针对json对象
-public class jsoncheck {
+//针对json数组
+public class jsoncheckarray {
     //这是一个main方法，是程序的入口:
     public static void main(String[] args) {
         // 指定磁盘，例如E盘
@@ -61,10 +63,10 @@ public class jsoncheck {
             // 将字符串写入文件
             String ss = strBuilder.toString();
             //转为json对象
-            JSONObject json = JSONObject.fromObject(ss);
-            //System.out.println("json = " + json);
-            String s3 = json.toString();
-            writer.write(s3);
+            JSONArray jsonArray1 = JSONArray.fromObject(ss);
+            String s33 = jsonArray1.toString();
+            System.out.println("s33 = " + s33);
+            writer.write(s33);
             writer.newLine(); // 换行
             writer.close();
 
