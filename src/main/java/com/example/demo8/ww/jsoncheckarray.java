@@ -27,7 +27,7 @@ public class jsoncheckarray {
         // 需要写入磁盘的字符串
         String stringToWrite = "这是需要写入磁盘的字符串 tianwei ";
         // 指定写入磁盘的文件路径
-        String diskPath = "F:\\testjson\\tianweijsonout.txt";
+        String diskPath = "F:\\testjson\\tianweijsonout.json";
         String folderPath = "F:\\testjson"; // 替换为你想要创建的文件夹路径
         File folder = new File(folderPath);
         Charset charset = Charset.forName("UTF-8"); // 指定编码格式
@@ -62,8 +62,10 @@ public class jsoncheckarray {
             //System.out.println("strBuilder = " + strBuilder);
             // 将字符串写入文件
             String ss = strBuilder.toString();
-            //转为json对象
+            //转为jsonlist
             JSONArray jsonArray1 = JSONArray.fromObject(ss);
+            int size = jsonArray1.size();
+            System.out.println("size = " + size);
             String s33 = jsonArray1.toString();
             System.out.println("s33 = " + s33);
             writer.write(s33);

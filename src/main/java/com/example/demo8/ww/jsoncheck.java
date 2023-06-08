@@ -3,6 +3,7 @@ package com.example.demo8.ww;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+
 import net.sf.json.JSONObject;
 
 
@@ -25,7 +26,7 @@ public class jsoncheck {
         // 需要写入磁盘的字符串
         String stringToWrite = "这是需要写入磁盘的字符串 tianwei ";
         // 指定写入磁盘的文件路径
-        String diskPath = "F:\\testjson\\tianweijsonout.txt";
+        String diskPath = "F:\\testjson\\tianweijsonout.json";
         String folderPath = "F:\\testjson"; // 替换为你想要创建的文件夹路径
         File folder = new File(folderPath);
         Charset charset = Charset.forName("UTF-8"); // 指定编码格式
